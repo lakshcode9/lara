@@ -252,4 +252,56 @@ h1 {
   .posts-grid {
     grid-template-columns: 1fr;
   }
+  
+  .controls {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .brand {
+    font-size: 1.25rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .snippet {
+    font-size: 1rem;
+  }
+  
+  .stats-container {
+    gap: 0.5rem;
+  }
+  
+  .stat-value {
+    font-size: 0.9rem;
+  }
+  
+  .view-btn {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
 }
