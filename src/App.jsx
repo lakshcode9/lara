@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
-import { ExternalLink, TrendingUp, MessageCircle, Heart, ChevronDown, ChevronUp } from 'lucide-react';
-import { LinkedInEmbed } from 'react-social-media-embed';
+import { TrendingUp, MessageCircle, Heart, Calendar } from 'lucide-react';
 import { posts } from './data';
 
 const PostCard = ({ post }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  // Only attempt to embed if the URL looks like a specific post, not a profile activity feed
-  const canEmbed = post.url.includes('/posts/') || post.url.includes('/activity/') || post.url.includes('/urn:li:');
+  const maxLength = 250; // Character count before truncation
+  const shouldTruncate = post.content.length > maxLength;
+  
+  const displayContent = isExpanded ? post.content : (shouldTruncate ? post.content.slice(0, maxLength) + "..." : post.content);
 
   return (
     <motion.div
@@ -21,57 +22,63 @@ const PostCard = ({ post }) => {
         <div className="rank-badge">
           Rank <span className="rank-number">#{post.rank}</span>
         </div>
-        <span className="category-tag">{post.format}</span>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <span className="category-tag" style={{ display: 'flex', alignItems: 'center', gap: '4px', opacity: 0.8 }}>
+             <Calendar size={12} /> {post.date}
+          </span>
+          <span className="category-tag">{post.format}</span>
+        </div>
       </div>
       
-      <p className="snippet">"{post.snippet}"</p>
-      
-      {isExpanded && canEmbed && (
-        <motion.div 
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="embed-container"
-          style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}
-        >
-          <LinkedInEmbed url={post.url} width="100%" height={500} />
-        </motion.div>
-      )}
+      <div className="content-body" style={{ flexGrow: 1, marginBottom: '2rem' }}>
+        <p className="snippet" style={{ 
+          fontSize: '1rem', 
+          lineHeight: '1.6', 
+          color: 'var(--text-primary)',
+          whiteSpace: 'pre-wrap', // Preserve newlines
+          fontFamily: 'inherit'
+        }}>
+          {displayContent}
+        </p>
+        
+        {shouldTruncate && (
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            style={{ 
+              background: 'none', 
+              border: 'none', 
+              color: 'var(--accent)', 
+              cursor: 'pointer', 
+              marginTop: '0.5rem',
+              fontWeight: '600',
+              fontSize: '0.9rem',
+              padding: 0
+            }}
+          >
+            {isExpanded ? "Show Less" : "Read More"}
+          </button>
+        )}
+      </div>
 
-      <div className="stats-container">
+      <div className="stats-container" style={{ marginTop: 'auto', borderTop: '1px solid var(--border)', paddingTop: '1.5rem' }}>
         <div className="stat-item">
           <span className="stat-label" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <Heart size={10} /> Likes
+            <Heart size={14} /> Likes
           </span>
           <span className="stat-value">{post.reactions.toLocaleString()}</span>
         </div>
         <div className="stat-item">
           <span className="stat-label" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <MessageCircle size={10} /> Comments
+            <MessageCircle size={14} /> Comments
           </span>
           <span className="stat-value">{post.comments.toLocaleString()}</span>
         </div>
         <div className="stat-item">
           <span className="stat-label" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <TrendingUp size={10} /> Score
+            <TrendingUp size={14} /> Score
           </span>
           <span className="stat-value highlight">{post.engagementScore.toLocaleString()}</span>
         </div>
-      </div>
-
-      <div className="card-footer" style={{ display: 'flex', gap: '0.5rem' }}>
-        <a href={post.url} target="_blank" rel="noopener noreferrer" className="view-btn" style={{ flex: 1 }}>
-          View on LinkedIn <ExternalLink size={16} />
-        </a>
-        {canEmbed && (
-          <button 
-            className="view-btn" 
-            style={{ width: 'auto', padding: '0.8rem' }}
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-          </button>
-        )}
       </div>
     </motion.div>
   );
