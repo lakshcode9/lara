@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
-import { TrendingUp, MessageCircle, Heart, Calendar } from 'lucide-react';
+import { TrendingUp, MessageCircle, Heart, Calendar, ExternalLink } from 'lucide-react';
 import { posts } from './data';
 
 const PostCard = ({ post }) => {
