@@ -80,6 +80,43 @@ const PostCard = ({ post }) => {
           <span className="stat-value highlight">{post.engagementScore.toLocaleString()}</span>
         </div>
       </div>
+
+      {post.url && (
+        <div className="card-footer" style={{ marginTop: '1.5rem' }}>
+          <a 
+            href={post.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="view-btn"
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              gap: '0.5rem',
+              width: '100%',
+              padding: '0.8rem',
+              borderRadius: '0.75rem',
+              background: 'rgba(255, 255, 255, 0.05)',
+              color: 'var(--text-primary)',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+              fontWeight: '500',
+              transition: 'all 0.3s ease',
+              border: '1px solid transparent'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = 'var(--text-primary)';
+              e.currentTarget.style.color = 'var(--bg-primary)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+              e.currentTarget.style.color = 'var(--text-primary)';
+            }}
+          >
+            Open on LinkedIn <ExternalLink size={16} />
+          </a>
+        </div>
+      )}
     </motion.div>
   );
 };

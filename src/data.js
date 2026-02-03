@@ -1,6 +1,7 @@
 export const posts = [
   {
     rank: 1,
+    url: "https://www.linkedin.com/posts/laraacostar_i-went-on-my-dream-podcast-but-nearly-canceled-activity-7417900388810485760-JcPu",
     date: "2w ago",
     format: "Video",
     reactions: 1810,
@@ -34,6 +35,7 @@ Do it scared.`
   },
   {
     rank: 2,
+    url: "https://www.linkedin.com/posts/jakezward_pov-building-a-startup-with-your-friends-activity-7417187988121477120-MARY",
     date: "3w ago",
     format: "Carousel",
     reactions: 2170,
@@ -74,6 +76,7 @@ All still just through content.`
   },
   {
     rank: 3,
+    url: "https://www.linkedin.com/posts/laraacostar_this-is-my-no1-tip-to-fix-your-low-engagement-activity-7421526395811520512-KRhJ",
     date: "1w ago",
     format: "Infographic",
     reactions: 1485,
@@ -107,6 +110,7 @@ Start treating your LinkedIn posts like mini-magazines.`
   },
   {
     rank: 4,
+    url: "https://www.linkedin.com/posts/laraacostar_pov-you-stopped-spending-10-hrs-writing-activity-7419717937164460032-Pv5T",
     date: "1mo ago",
     format: "Infographic",
     reactions: 1485,
@@ -142,6 +146,7 @@ But Quality + Consistency = Unstoppable.`
   },
   {
     rank: 5,
+    url: "https://www.linkedin.com/posts/laraacostar_pov-inside-my-london-flat-during-launch-activity-7422604462021582848-MJgV",
     date: "5d ago",
     format: "Carousel",
     reactions: 1704,
@@ -176,6 +181,7 @@ Kick the door open.`
   },
   {
     rank: 6,
+    url: "https://www.linkedin.com/posts/laraacostar_pov-youre-in-your-20s-building-a-business-activity-7417546466640052224-bJAg",
     date: "2w ago",
     format: "Video",
     reactions: 1377,
@@ -206,37 +212,45 @@ Serve them so well they'd fly across the world to say thank you.`
   },
   {
     rank: 7,
+    url: "https://www.linkedin.com/posts/laraacostar_in-2023-jake-and-i-started-posting-on-linkedin-activity-7411007785624182784-Qt8z",
     date: "4w ago",
     format: "Video",
     reactions: 1377,
     comments: 882,
     engagementScore: 4023,
     category: "Strategy",
-    content: `"How My App Hit $60K/Month in Just 2 Months"
-(Starter Story collaboration)
+    content: `In 2023, Jake and I started posting on LinkedIn.
 
-I sat down with the team at Starter Story to break down exactly how we did it.
+We had $0.
+No audience.
+No connections.
 
-No VCs.
-No paid ads.
-No massive team.
+We were just two kids in London with laptops and too much time.
 
-Just a personal brand and a good product.
+People told us:
+"LinkedIn is for old people."
+"You're wasting your time."
+"Get a real job."
 
-The breakdown:
-1. Pre-launch hype: We teased the product for 30 days before launch.
-2. The Waitlist: We built a waiting list of 5,000+ people using just LinkedIn content.
-3. The Offer: We created an irresistible launch offer that rewarded early adopters.
+Fast forward to today:
+- We run a 7-figure media company.
+- We help founders build their brands.
+- We travel the world doing what we love.
 
-Most startups die because they build in silence.
-We built in public.
+The crazy part?
+We didn't do anything special.
+We just showed up every day for 2 years.
 
-We made our audience part of the team.
-And when we launched, they didn't just buy.
-They cheered for us.`
+Here is the secret:
+Most people quit when it gets hard.
+Be the person who keeps going.
+
+Consistency isn't sexy.
+But it builds empires.`
   },
   {
     rank: 8,
+    url: "https://www.linkedin.com/posts/laraacostar_the-best-entrepreneurs-i-know-dont-believe-activity-7417174729259909121-qO05",
     date: "4w ago",
     format: "Text",
     reactions: 1377,
@@ -271,6 +285,7 @@ Who's with me?`
   },
   {
     rank: 9,
+    url: "https://www.linkedin.com/posts/laraacostar_in-november-my-small-business-hit-200kmo-activity-7416819468049252352-2VIz",
     date: "3w ago",
     format: "Carousel",
     reactions: 1596,
@@ -302,6 +317,7 @@ This is it.`
   },
   {
     rank: 10,
+    url: "https://www.linkedin.com/posts/laraacostar_i-spent-the-last-90-days-testing-every-linkedin-activity-7418989480877031425-RtsB",
     date: "2w ago",
     format: "Infographic",
     reactions: 1379,
@@ -334,6 +350,7 @@ The work IS the pill.`
   },
   {
     rank: 11,
+    url: "https://www.linkedin.com/posts/laraacostar_pov-you-locked-yourself-in-a-room-until-activity-7422953459219345408-UCG2",
     date: "4d ago",
     format: "Video",
     reactions: 1193,
@@ -365,6 +382,7 @@ You need hunger.`
   },
   {
     rank: 12,
+    url: "https://www.linkedin.com/posts/laraacostar_ive-been-posting-on-linkedin-for-3-years-activity-7424414029978394624-UP9N",
     date: "6h ago",
     format: "Image/Text",
     reactions: 1011,
@@ -395,31 +413,40 @@ But it works.`
   },
   {
     rank: 13,
+    url: "https://www.linkedin.com/posts/laraacostar_if-my-linkedin-went-to-zero-today-heres-activity-7324760130456018944-CHAq",
     date: "1d ago",
     format: "Live Event",
     reactions: 377,
     comments: 376,
     engagementScore: 1505,
     category: "Strategy",
-    content: `I've been building in public since I started on LinkedIn.
+    content: `If my LinkedIn went to zero today, here's what I'd do.
 
-The benefit?
-Sold-out launches every time...
+(This is exactly how I built my personal brand to 100k+ followers in 12 months)
 
-Why?
-Because people support what they help create.
+1. Optimize my profile.
+- Clear headline: Who I help + How I help.
+- Professional Banner.
+- Featured section with social proof.
 
-When you build in public, you aren't just selling a product.
-You are selling a journey.
+2. Daily engagement strategy.
+- 10 comments on big creators (value add).
+- 10 comments on peers (support).
+- 5 connection requests with personalized notes.
 
-I share the wins.
-I share the losses.
-I share the revenue numbers (even when they're scary).
+3. Content Strategy.
+- 5x posts per week.
+- 2x Carousels (Education).
+- 1x Personal Story (Connection).
+- 1x Case Study (Authority).
+- 1x Contrarian/Opinion (Growth).
 
-And in return, my audience trusts me.
-Trust is the currency of the internet.
+4. The "DM" Strategy.
+- Network sideways, not just up.
+- Build genuine relationships.
+- Don't pitch slapping.
 
-If you have trust, you can sell anything.
-Without it, you're just noise.`
+It's not about the algorithm.
+It's about the people.`
   }
 ];
